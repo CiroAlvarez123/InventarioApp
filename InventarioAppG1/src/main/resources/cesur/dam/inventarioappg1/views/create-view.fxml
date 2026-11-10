@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minWidth="336.0" prefHeight="275.0" prefWidth="336.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cesur.dam.inventarioappg1.controllers.CreateController">
+    <padding><Insets bottom="30.0" left="30.0" right="30.0" top="30.0" /></padding>
+    <Label text="Crear nuevo registro"><font><Font name="System Bold" size="24.0" /></font></Label>
+   <VBox prefHeight="200.0" prefWidth="100.0">
+      <children>
+           <Label prefWidth="80.0" text="Nombre" />
+           <TextField fx:id="txtName" />
+         <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <Label prefWidth="80.0" text="Descripcion" />
+               <TextArea prefHeight="37.0" prefWidth="303.0" />
+            </children>
+         </VBox>
+         <VBox layoutX="10.0" layoutY="52.0" prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <Label prefWidth="80.0" text="Fecha" />
+               <DatePicker prefHeight="25.0" prefWidth="286.0" />
+            </children>
+         </VBox>
+         <VBox layoutX="10.0" layoutY="106.0" prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <Label prefWidth="80.0" text="Estado" />
+                 <ChoiceBox fx:id="choiceCategory" prefHeight="25.0" prefWidth="297.0" />
+            </children>
+         </VBox>
+      </children>
+   </VBox>
+    <FlowPane alignment="CENTER" hgap="20.0">
+        <Button onAction="#onGuardar" prefHeight="35.0" prefWidth="76.0" text="Guardar" />
+      <Button contentDisplay="RIGHT" layoutX="87.0" layoutY="10.0" onAction="#onGuardar" prefHeight="35.0" prefWidth="77.0" text="Cancelar" />
+    </FlowPane>
+</VBox>
